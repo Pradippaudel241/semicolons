@@ -1,0 +1,400 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    background-color: #000000;
+    color: #fff;
+    padding: 1.5rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+nav .nav-list {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+nav .nav-list a {
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav .nav-list a:hover {
+    background-color: #003b80;
+}
+
+#searchForm {
+    display: flex;
+    align-items: center;
+}
+
+#searchForm input {
+    padding: 0.75rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 0.5rem;
+}
+
+#searchForm button {
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    background-color: #e3b23c;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+#searchForm button:hover {
+    background-color: #c09531;
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/aeeee.png') no-repeat center center/cover;
+    padding: 3rem 0;
+    color: white;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+    padding: 0.75rem 1.5rem;
+    background-color: #e3b23c;
+    color: white;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #c09531;
+}
+
+/* Flight Search Section */
+.flight-search {
+    background-color: #fff;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.flight-search h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    color: #0056b3;
+}
+
+.btn-switch {
+    background-color: #e3b23c;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.btn-switch.active {
+    background-color: #5a9936;
+}
+
+.input-group {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.input-field {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1rem;
+}
+
+/* Popular Airlines Section */
+.popular-airlines {
+    padding: 2rem;
+    background-color: #f4f4f4;
+}
+
+
+.popular-airlines h3 {
+    text-align: center;
+    color: #0056b3;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 1rem 0;
+    padding: 1rem;
+    flex: 1 1 calc(33.333% - 1rem);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.card h4 {
+    margin: 1rem 0;
+    font-size: 1.25rem;
+    color: #0056b3;
+}
+
+.card p {
+    font-size: 1rem;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* News Section */
+.news {
+    padding: 2rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.news h3 {
+    color: #0056b3;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.news-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.news-item {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    overflow: hidden;
+    flex: 1 1 calc(33.333% - 1rem);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.news-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 1rem;
+    flex-grow: 1;
+}
+
+.news-content h4 {
+    margin: 0 0 1rem;
+    font-size: 1.25rem;
+    color: #0056b3;
+}
+
+.news-content p {
+    margin: 0 0 1rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+.news-content a {
+    color: #0056b3;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.news-content a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #0056b3;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section li {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #f0f0f0;
+}
+
+.footer-section .social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-section .social-icons a img {
+    width: 32px;
+    height: 32px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #003b80;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-container,
+    .news-container {
+        flex-direction: column;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+}
+.btn-search {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-search button {
+    background-color: #0077b6; /* Background color of the button */
+    color: #ffffff; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 12px 20px; /* Padding inside the button */
+    font-size: 1em; /* Font size */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for background color and hover effect */
+}
+
+.btn-search button a {
+    color: #ffffff; /* Text color of the link */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Make link block level to fill button */
+}
+
+.btn-search button:hover {
+    background-color: #005f73; /* Darker background color on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.btn-search button:focus {
+    outline: none; /* Remove default outline */
+}
+

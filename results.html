@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - Aerodetails</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .results-container {
+            width: 90%;
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        @keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    width: 100%;
+  
+    margin: 2% 0;
+    animation: fadeInScale 1s ease-out;
+}
+
+
+        .flight-card {
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            width: 48%;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .flight-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        @media screen and (max-width: 768px) {
+            .flight-card {
+                width: 100%;
+            }
+        }
+
+        .flight-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .airline-logo {
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+            object-fit: contain;
+        }
+
+        .flight-info div {
+            margin-right: 20px;
+        }
+
+        .flight-time,
+        .flight-route,
+        .flight-details,
+        .flight-price {
+            text-align: center;
+        }
+
+        .flight-time p,
+        .flight-route p,
+        .flight-details p,
+        .flight-price p {
+            margin: 5px 0;
+        }
+
+        .flight-price {
+            font-weight: bold;
+            color: #ff5733;
+        }
+
+        .non-refundable {
+            color: #28a745;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        .book-btn , a {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            text-decoration: none;
+        }
+       .home{
+        background-color: #28a745;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            text-decoration: none;
+       }
+        .book-btn:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Available Air Services(8 flights found)</h2>
+    <div class="results-container">
+
+        <div class="flight-card">
+            <div class="flight-info">
+                <img src="images/Shree-Airlines-Logo.png" alt="Shree Airlines" class="airline-logo">
+                <div>
+                    <h3>SHREE AIRLINES</h3>
+                    <p>Q400</p>
+                </div>
+                <div class="flight-time">
+                    <p>12:30</p>
+                    <p>—</p>
+                    <p>12:55</p>
+                </div>
+                <div class="flight-route">
+                    <p>BWA</p>
+                    <p>KTM</p>
+                </div>
+                <div class="flight-details">
+                    <p>Class T</p>
+                    <p>20.00 KG</p>
+                </div>
+                <div class="flight-price">
+                    <p>NPR 5,200</p>
+                    <p>Reward Pts 100</p>
+                    <p class="non-refundable">Non-Refundable</p>
+                </div>
+            </div>
+            <button class="book-btn"><a href="details.html">Details</a></button>
+        </div>
+
+        <div class="flight-card">
+            <div class="flight-info">
+                <img src="images/yeti-logo.png" alt="Yeti Airlines" class="airline-logo">
+                <div>
+                    <h3>YETI AIRLINES</h3>
+                    <p>ATR72</p>
+                </div>
+                <div class="flight-time">
+                    <p>14:10</p>
+                    <p>—</p>
+                    <p>14:40</p>
+                </div>
+                <div class="flight-route">
+                    <p>BWA</p>
+                    <p>KTM</p>
+                </div>
+                <div class="flight-details">
+                    <p>Class H</p>
+                    <p>20+5 KG</p>
+                </div>
+                <div class="flight-price">
+                    <p>NPR 5,200</p>
+                    <p>Reward Pts 150</p>
+                    <p class="non-refundable">Non-Refundable</p>
+                </div>
+            </div>
+            <button class="book-btn"><a href="details.html">Details</a></button>
+        </div>
+
+        <div class="flight-card">
+            <div class="flight-info">
+                <img src="images/himalayan.png" alt="Himalayan Airlines" class="airline-logo">
+                <div>
+                    <h3>HIMALAYAN AIRLINES</h3>
+                    <p>ATR72</p>
+                </div>
+                <div class="flight-time">
+                    <p>14:10</p>
+                    <p>—</p>
+                    <p>14:40</p>
+                </div>
+                <div class="flight-route">
+                    <p>BWA</p>
+                    <p>KTM</p>
+                </div>
+                <div class="flight-details">
+                    <p>Class H</p>
+                    <p>20+5 KG</p>
+                </div>
+                <div class="flight-price">
+                    <p>NPR 5,200</p>
+                    <p>Reward Pts 150</p>
+                    <p class="non-refundable">Non-Refundable</p>
+                </div>
+            </div>
+            <button class="book-btn"><a href="details.html">Details</a></button>
+        </div>
+
+        <div class="flight-card">
+            <div class="flight-info">
+                <img src="images/Buddha-Air-Logo.png" alt="Buddha Air" class="airline-logo">
+                <div>
+                    <h3>BUDDHA AIR</h3>
+                    <p>ATR72</p>
+                </div>
+                <div class="flight-time">
+                    <p>14:10</p>
+                    <p>—</p>
+                    <p>14:40</p>
+                </div>
+                <div class="flight-route">
+                    <p>BWA</p>
+                    <p>KTM</p>
+                </div>
+                <div class="flight-details">
+                    <p>Class H</p>
+                    <p>20+5 KG</p>
+                </div>
+                <div class="flight-price">
+                    <p>NPR 5,200</p>
+                    <p>Reward Pts 150</p>
+                    <p class="non-refundable">Non-Refundable</p>
+                </div>
+            </div>
+            <button class="book-btn"><a href="details.html">Details</a></button>
+        </div>
+        <div class="flight-card">
+            <div class="flight-info">
+                <img src="images/Buddha-Air-Logo.png" alt="Buddha Air" class="airline-logo">
+                <div>
+                    <h3>BUDDHA AIR</h3>
+                    <p>ATR72</p>
+                </div>
+                <div class="flight-time">
+                    <p>14:10</p>
+                    <p>—</p>
+                    <p>14:40</p>
+                </div>
+                <div class="flight-route">
+                    <p>BWA</p>
+                    <p>KTM</p>
+                </div>
+                <div class="flight-details">
+                    <p>Class H</p>
+                    <p>20+5 KG</p>
+                </div>
+                <div class="flight-price">
+                    <p>NPR 5,200</p>
+                    <p>Reward Pts 150</p>
+                    <p class="non-refundable">Non-Refundable</p>
+                </div>
+            </div>
+            <button class="book-btn"><a href="details.html">Details</a></button>
+        </div>
+        <div class="flight-card">
+            <div class="flight-info">
+                <img src="images/Buddha-Air-Logo.png" alt="Buddha Air" class="airline-logo">
+                <div>
+                    <h3>BUDDHA AIR</h3>
+                    <p>ATR72</p>
+                </div>
+                <div class="flight-time">
+                    <p>14:10</p>
+                    <p>—</p>
+                    <p>14:40</p>
+                </div>
+                <div class="flight-route">
+                    <p>BWA</p>
+                    <p>KTM</p>
+                </div>
+                <div class="flight-details">
+                    <p>Class H</p>
+                    <p>20+5 KG</p>
+                </div>
+                <div class="flight-price">
+                    <p>NPR 5,200</p>
+                    <p>Reward Pts 150</p>
+                    <p class="non-refundable">Non-Refundable</p>
+                </div>
+            </div>
+            <button class="book-btn"><a href="details.html">Details</a></button>
+        </div>
+        <div class="flight-card">
+            <div class="flight-info">
+                <img src="images/Buddha-Air-Logo.png" alt="Buddha Air" class="airline-logo">
+                <div>
+                    <h3>BUDDHA AIR</h3>
+                    <p>ATR72</p>
+                </div>
+                <div class="flight-time">
+                    <p>14:10</p>
+                    <p>—</p>
+                    <p>14:40</p>
+                </div>
+                <div class="flight-route">
+                    <p>BWA</p>
+                    <p>KTM</p>
+                </div>
+                <div class="flight-details">
+                    <p>Class H</p>
+                    <p>20+5 KG</p>
+                </div>
+                <div class="flight-price">
+                    <p>NPR 5,200</p>
+                    <p>Reward Pts 150</p>
+                    <p class="non-refundable">Non-Refundable</p>
+                </div>
+            </div>
+            <button class="book-btn"><a href="details.html">Details</a></button>
+        </div>
+        <div class="flight-card">
+            <div class="flight-info">
+                <img src="images/Buddha-Air-Logo.png" alt="Buddha Air" class="airline-logo">
+                <div>
+                    <h3>BUDDHA AIR</h3>
+                    <p>ATR72</p>
+                </div>
+                <div class="flight-time">
+                    <p>14:10</p>
+                    <p>—</p>
+                    <p>14:40</p>
+                </div>
+                <div class="flight-route">
+                    <p>BWA</p>
+                    <p>KTM</p>
+                </div>
+                <div class="flight-details">
+                    <p>Class H</p>
+                    <p>20+5 KG</p>
+                </div>
+                <div class="flight-price">
+                    <p>NPR 5,200</p>
+                    <p>Reward Pts 150</p>
+                    <p class="non-refundable">Non-Refundable</p>
+                </div>
+            </div>
+            <button class="book-btn"><a href="details.html">Details</a></button>
+        </div>
+        <button class="home">
+            <a href="index.html">
+                <i class="fas fa-home"></i> Back to homepage
+            </a>
+        </button>
+        
+    </div>
+</body>
+
+</html>

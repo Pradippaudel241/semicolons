@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyGuard - Your Trusted Airline Partner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>SkyGuard</h1>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="#planes">Planes</a></li>
+                    <li><a href="About-us.html">About Us</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#feedback">Feedback</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+            <form id="searchForm">
+                <input type="text" id="searchInput" placeholder="Search for an airplane model...">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2 style="position: relative;color:rgb(0, 0, 0);top: -40px;">Explore the Skies with SkyGuard</h2>
+            <p style="position: relative;color:red;top: -39px;color: black;">Your safety, comfort, and satisfaction are our top priorities.</p>
+            <a href="#book" class="btn-primary">Discover aviation</a>
+        </div>
+    </section>
+
+    <section class="flight-search" id="book">
+        <h3>Investigate Air Travel</h3>
+        <button class="btn-switch active">Two Way</button>
+        <button class="btn-switch">One Way</button>
+
+        <div class="input-group">
+            <select class="input-field">
+                <option value="" disabled selected>Origin</option>
+                <option value="">Kathmandu</option>
+                <option value="">Pokhara</option>
+                <option value="">Dhangadi</option>
+                <option value="">Biratnagar</option>
+                <option value="">Bhairawa</option>
+                <option value="">Ramechhap</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <select class="input-field">
+                <option value="" disabled selected>Destination</option>
+                <option value="">Kathmandu</option>
+                <option value="">Pokhara</option>
+                <option value="">Dhangadi</option>
+                <option value="">Biratnagar</option>
+                <option value="">Bhairawa</option>
+                <option value="">Ramechhap</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <input type="date" class="input-field" placeholder="Departure">
+        </div>
+
+        <div class="input-group">
+            <input type="date" class="input-field return" placeholder="Return">
+        </div>
+
+        <div class="input-group">
+            <select class="input-field">
+                <option value="" disabled selected>Nationality</option>
+                <option value="">Nepali</option>
+                <option value="">Indian</option>
+                <option value="">Chinese</option>
+                <option value="">American</option>
+                <option value="">Australian</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <select class="input-field">
+                <option value="" disabled selected>Adult</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <select class="input-field">
+                <option value="" disabled selected>Child</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+
+        <div class="btn-search">
+            <button><a href="results.html">Search</a></button>
+        </div>
+    </section>
+
+    <section class="popular-airlines" id="planes">
+        <h3>Popular Airlines in Nepal</h3>
+        <div class="card-container">
+            <div class="card">
+                <img src="images/yetiairlinephoto.png" alt="Airline 1">
+                <h4>Yeti Airlines</h4>
+                <p>Yeti Airlines offers domestic flights to major destinations in Nepal with a focus on safety and comfort.</p>
+            </div>
+            <div class="card">
+                <img src="images/budhhaairlinephoto.png" alt="Airline 2">
+                <h4>Buddha Air</h4>
+                <p>Buddha Air is one of the largest airlines in Nepal, known for its excellent service and extensive flight network.</p>
+            </div>
+            <div class="card">
+                <img src="images/taraairlinephoto.png" alt="Airline 3">
+                <h4>Tara Air</h4>
+                <p>Tara Air specializes in remote area flights, connecting some of the most difficult terrains in Nepal.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="news" id="news">
+        <h3>Latest Aviation News</h3>
+        <div class="news-container">
+            <div class="news-item">
+                <img src="images/new-innovation.png" alt="News 1">
+                <div class="news-content">
+                    <h4>Innovation in Aviation</h4>
+                    <p>Discover the latest innovations in aviation technology that are shaping the future of air travel.</p>
+                    <a href="#">Read more</a>
+                </div>
+            </div>
+            <div class="news-item">
+                <img src="images/safety.png" alt="News 2">
+                <div class="news-content">
+                    <h4>Airplane Safety Measures</h4>
+                    <p>Learn about the new safety protocols that airlines are implementing to ensure passenger well-being.</p>
+                    <a href="#">Read more</a>
+                </div>
+            </div>
+            <div class="news-item">
+                <img src="images/plane-crash.png" alt="News 3">
+                <div class="news-content">
+                    <h4>Recent Air Accidents</h4>
+                    <p>Get insights into recent air accidents and the investigations that followed.</p>
+                    <a href="#">Read more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About SkyGuard</h3>
+                <p>SkyGuard is a leading airline company offering the best travel experience with a focus on safety, comfort, and innovation.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#planes">Planes</a></li>
+                    <li><a href="About-us.html">About Us</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Instragram</li>
+                    <li>Linkden</li>
+                    <li>X</li>
+
+                </ul>
+                    <!-- <a href="#"><img src="images/facebooklogo.png" alt="Facebook"></a>
+                    <a href="#"><img src="images/xicon.png" alt="Twitter"></a>
+                    <a href="#"><img src="images/ins.png" alt="Instagram"></a>
+                    <a href="#"><img src="images/wp.png" alt="Whats app"></a> -->
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SkyGuard. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

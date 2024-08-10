@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Form Container */
+        .booking-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h2 {
+            text-align: center;
+            color: #0077b6;
+            margin-bottom: 20px;
+        }
+
+        label {
+            color: #333;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #0077b6;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #005f8c;
+        }
+
+        /* Fade-in Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Modal Popup */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 999;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            animation: slideIn 0.5s ease-in-out;
+        }
+
+        .popup h4 {
+            margin-bottom: 15px;
+            color: #0077b6;
+        }
+
+        .popup p {
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .popup button {
+            margin-top: 10px;
+            background-color: #0077b6;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .popup button:hover {
+            background-color: #005f8c;
+        }
+
+        /* Slide-in Animation */
+        @keyframes slideIn {
+            from { transform: translate(-50%, 10%); }
+            to { transform: translate(-50%, -50%); }
+        }
+    </style>
+</head>
+<body>
+    <div class="booking-form">
+        <h2>Enter Your Details</h2>
+        <form id="flightBookingForm">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="email">Number</label>
+            <input type="text" id="email" name="number" required>
+
+           
+
+
+
+
+            <button type="button" onclick="bookFlight()">Book</button>
+        </form>
+    </div>
+
+    <div class="overlay" onclick="closePopup()"></div>
+    <div class="popup">
+        <h4>Flight Ticket Details</h4>
+        <p id="ticket-details"></p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <script>
+        function bookFlight() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+
+            const ticketDetails = `
+                Name: ${name}<br>
+                Email: ${email}<br>
+                Destination: ${sessionStorage.getItem('destination')}<br>
+                Date of Travel: ${sessionStorage.getItem('date')}<br>
+                Class: ${sessionStorage.getItem('class')}
+            `;
+
+            document.getElementById('ticket-details').innerHTML = ticketDetails;
+
+            document.querySelector('.popup').style.display = 'block';
+            document.querySelector('.overlay').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.querySelector('.popup').style.display = 'none';
+            document.querySelector('.overlay').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

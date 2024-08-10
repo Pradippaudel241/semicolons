@@ -1,0 +1,115 @@
+ <section id="popularAircrafts" class="content-section">
+        <h2 style="color: black;">Popular Aircraft in Nepal</h2>
+        <div class="cards">
+            <!-- Popular Aircraft Cards -->
+            <div class="card">
+                <img src="images/buddha.png" alt="Buddha Airline Logo">
+                <h3>Buddha Airline</h3>
+                <p>Discover the routes and safety measures of Budhha Airline, a prominent name in Nepal.</p>
+                <a href="#" class="btn">See Details</a>
+            </div>
+            <div class="card">
+                <img src="images/yeti_logo.png" alt="Yeti Airline Logo">
+                <h3>Yeti Airline</h3>
+                <p>Discover  the  &nbsp;routes and &nbsp;safety &nbsp; measures of Yeti Airline, a prominent name in Nepal.</p>
+                <a href="#" class="btn">See Details</a>
+            </div>
+            <div class="card">
+                <img src="images/surya.png"  alt="Nepal Airline Logo">
+                <h3>Surya Airline</h3>
+                <p>Discover the routes and safety measures of Saurya Airline, a prominent name in Nepal.</p>
+                <a href="#" class="btn">See Details</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="accidents" class="content-section">
+        <h2 style="color: black;">Aircraft Accidents in Nepal</h2>
+        
+        <div class="cards">
+            <!-- Accident Cards -->
+            <div class="card">
+                <img src="images/airbangla.png" alt="Nepal Accident">
+                <h3>Terrific Accidents in Nepal</h3>
+                <p>Explore the history of some of the most tragic airplane accidents in Nepal...</p>
+            </div>
+            <div class="card">
+                <img src="images/yeti.png" alt="Nepal Accident">
+                <h3>Terrific Accidents in Nepal</h3>
+                <p>Explore the history of some of the most tragic airplane accidents in Nepal...</p>
+            </div>
+            <div class="card">
+                <img src="images/surya-airline.png" alt="Recent Accident">
+                <h3>Recent Airplane Accident</h3>
+                <p>Details about the most recent airplane accident that shook the world...</p>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <section id="aircraftNews" class="content-section">
+            <h2 style="color: black;">Aircraft News</h2>
+            <div class="cards">
+                <!-- News Cards -->
+                <div class="card">
+                    <img src="images/new-innovation.png" alt="Aircraft News">
+                    <h3>New Innovations in Aircraft Technology</h3>
+                    <p>Discover the latest breakthroughs in aviation technology...</p>
+                </div>
+                <div class="card">
+                    <img src="images/engine.png" alt="Next-Gen Engines">
+                    <h3>Next-Gen Aircraft Engines</h3>
+                    <p>Discover how new engine designs are making aircraft more powerful and fuel-efficient.</p>
+                 
+                </div>
+                <div class="card">
+                    <img src="images/safety.png" alt="Safety">
+                    <h3>Aircraft Safety Standards</h3>
+                    <p>Learn about the latest safety measures being implemented in the industry...</p>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+     <footer>
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h3>About Aerodetails</h3>
+                <p>Aerodetails is your go-to platform for all things aviation. We provide detailed information on airplanes, pilot data, aviation news, and much more. Stay updated with the latest in aviation technology and safety.</p>
+            </div>
+    
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#planes">Planes</a></li>
+                    <li><a href="#aboutUs">About Us</a></li>
+                    <li><a href="#feedback">Feedback</a></li>
+                    <li><a href="#login">Login</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>Email: info@aerodetails.com</li>
+                    <li>Phone: +977 123-456-789</li>
+                    <li>Address: 123 Aviation St., Kathmandu, Nepal</li>
+                </ul>
+            </div>
+    
+            <div class="footer-section follow">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="images/twitter-icon.png" alt="Twitter"></a>
+                    <a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a>
+                    <a href="#"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2024 Aerodetails | All rights reserved.</p>
+        </div>
+    </footer>
+    
