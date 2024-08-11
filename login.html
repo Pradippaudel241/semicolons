@@ -6,47 +6,54 @@
     <title>Login & Register</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e9ecef;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
+            overflow: hidden;
         }
 
         .auth-container {
             background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+            width: 350px;
             text-align: center;
+            position: relative;
         }
 
         h2 {
-            margin-bottom: 20px;
-            color: #333;
+            margin-bottom: 25px;
+            color: #495057;
+            font-size: 24px;
         }
 
         .auth-tabs {
             display: flex;
             justify-content: space-around;
             margin-bottom: 20px;
+            border-bottom: 2px solid #dee2e6;
+            padding-bottom: 10px;
         }
 
         .auth-tabs button {
-            background-color: #5cb85c;
-            color: white;
+            background-color: transparent;
+            color: #495057;
             border: none;
             padding: 10px;
             cursor: pointer;
-            width: 50%;
-            border-radius: 4px;
+            font-size: 16px;
+            width: 100%;
+            transition: color 0.3s, border-bottom 0.3s;
         }
 
         .auth-tabs button.active {
-            background-color: #4cae4c;
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
         }
 
         .auth-form {
@@ -58,14 +65,14 @@
         }
 
         .input-group {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             text-align: left;
         }
 
         label {
             display: block;
             margin-bottom: 5px;
-            color: #333;
+            color: #495057;
         }
 
         input[type="text"],
@@ -73,37 +80,58 @@
         input[type="email"],
         select {
             width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
+            padding: 12px;
+            border: 1px solid #ced4da;
             border-radius: 4px;
             box-sizing: border-box;
+            font-size: 14px;
+            color: #495057;
         }
 
-        button {
+        button[type="submit"] {
             width: 100%;
-            padding: 10px;
-            background-color: #5cb85c;
+            padding: 12px;
+            background-color: #007bff;
             color: white;
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            margin-top: 10px;
+            font-size: 16px;
+            transition: background-color 0.3s;
         }
 
-        button:hover {
-            background-color: #4cae4c;
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .message {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        .message.show {
+            display: block;
         }
     </style>
 </head>
 <body>
     <div class="auth-container">
+        <div id="login-message" class="message">Successfully logged in!</div>
         <div class="auth-tabs">
             <button class="tab active" onclick="showForm('login')">Login</button>
             <button class="tab" onclick="showForm('register')">Register</button>
         </div>
 
         <!-- Login Form -->
-        <form id="login-form" class="auth-form active" action="login.php" method="post">
+        <form id="login-form" class="auth-form active" onsubmit="handleLogin(event)">
             <h2>Login</h2>
             <div class="input-group">
                 <label for="username">Username:</label>
@@ -125,7 +153,7 @@
         </form>
 
         <!-- Register Form -->
-        <form id="register-form" class="auth-form" action="register.php" method="post">
+        <form id="register-form" class="auth-form">
             <h2>Register</h2>
             <div class="input-group">
                 <label for="reg-username">Username:</label>
@@ -160,15 +188,27 @@
             document.getElementById('login-form').classList.remove('active');
             document.getElementById('register-form').classList.remove('active');
 
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+
             if (form === 'login') {
                 document.getElementById('login-form').classList.add('active');
-                document.querySelector('.tab').classList.add('active');
-                document.querySelector('.tab:nth-child(2)').classList.remove('active');
+                tabs[0].classList.add('active');
             } else {
                 document.getElementById('register-form').classList.add('active');
-                document.querySelector('.tab').classList.remove('active');
-                document.querySelector('.tab:nth-child(2)').classList.add('active');
+                tabs[1].classList.add('active');
             }
+        }
+
+        function handleLogin(event) {
+            event.preventDefault();
+            const message = document.getElementById('login-message');
+            message.classList.add('show');
+
+            setTimeout(() => {
+                message.classList.remove('show');
+                window.location.href = 'index.html';
+            }, 2000); // Redirect after 2 seconds
         }
     </script>
 </body>

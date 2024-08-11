@@ -1,36 +1,37 @@
-// document.getElementById('searchButton').addEventListener('click', function() {
-//     // Gather the form data
-//     const origin = document.getElementById('origin').value;
-//     const destination = document.getElementById('destination').value;
-//     const departure = document.getElementById('departure').value;
-//     const returnDate = document.getElementById('return').value;
-//     const nationality = document.getElementById('nationality').value;
-//     const adults = document.getElementById('adults').value;
-//     const children = document.getElementById('children').value;
 
-//     // Clear any existing results
-//     const resultsContainer = document.getElementById('searchResults');
-//     resultsContainer.innerHTML = '';
+    // Get references to elements
+    const twoWayBtn = document.getElementById('twoWay');
+    const oneWayBtn = document.getElementById('oneWay');
+    const returnDateGroup = document.getElementById('returnDateGroup');
+    const departureDate = document.getElementById('departure');
+    const returnDate = document.getElementById('returnDate');
 
-//     // Logic for displaying results
-//     if (origin === 'Kathmandu' && destination === 'Pokhara' && nationality === 'Nepali' && adults === '2' && children === '2') {
-//         resultsContainer.innerHTML = `
-//             <div class="card">
-//                 <h3>SHREE AIRLINES</h3>
-//                 <p>Departure: ${origin} | Arrival: ${destination}</p>
-//                 <p>12:30 - 12:55 | NPR 5200 | Non-Refundable</p>
-//                 <p>Nationality: ${nationality} | Adults: ${adults} | Children: ${children}</p>
-//                 <button>Book</button>
-//             </div>
-//             <div class="card">
-//                 <h3>YETI AIRLINES</h3>
-//                 <p>Departure: ${origin} | Arrival: ${destination}</p>
-//                 <p>14:10 - 14:40 | NPR 5200 | Non-Refundable</p>
-//                 <p>Nationality: ${nationality} | Adults: ${adults} | Children: ${children}</p>
-//                 <button>Book</button>
-//             </div>
-//         `;
-//     } else {
-//         alert('No matching flights found!');
-//     }
-// });
+
+    // Initialize today's date for date input restrictions
+    const today = new Date().toISOString().split('T')[0];
+    departureDate.setAttribute('min', today);
+    returnDate.setAttribute('min', today);
+
+    // Event listener for One Way button
+    oneWayBtn.addEventListener('click', () => {
+        oneWayBtn.classList.add('active');
+        twoWayBtn.classList.remove('active');
+        returnDate.style.display='none';
+        returnDateGroup.style.display = 'none';
+        returnDate.value = ''; // Clear the return date if switching to one way
+    });
+
+    // Event listener for Two Way button
+    twoWayBtn.addEventListener('click', () => {
+        console.log("hello");
+        twoWayBtn.classList.add('active');
+        oneWayBtn.classList.remove('active');
+        returnDateGroup.style.display = 'block';
+        returnDate.style.display='block';
+
+    });
+
+    // Event listener to ensure return date is not earlier than departure date
+    departureDate.addEventListener('change', () => {
+        returnDate.setAttribute('min', departureDate.value);
+    });

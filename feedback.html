@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - SkyGuard</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+
+        .feedback-container {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .feedback-container h1 {
+            margin-bottom: 1rem;
+            color: #0056b3;
+        }
+
+        .feedback-container form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .feedback-container input,
+        .feedback-container textarea {
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .feedback-container textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .feedback-container button {
+            padding: 0.75rem;
+            background-color: #0077b6;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .feedback-container button:hover {
+            background-color: #005f73;
+            transform: scale(1.05);
+        }
+
+        .feedback-container button:focus {
+            outline: none;
+        }
+
+        .message {
+            display: none;
+            margin-top: 1rem;
+            font-size: 1.25rem;
+            color: #28a745;
+        }
+
+        .message.show {
+            display: block;
+        }
+
+        .homepage-button {
+            margin-top: 1rem;
+            padding: 0.75rem;
+            background-color:green;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .homepage-button:hover {
+            background-color: #003d80;
+            transform: scale(1.05);
+        }
+
+        .homepage-button:focus {
+            outline: none;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="feedback-container">
+        <h1>Feedback Form</h1>
+        <form id="feedbackForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="feedback" placeholder="Your Feedback" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <div class="message" id="message">Submitted successfully</div>
+        <a href="index.html">
+            <button class="homepage-button" style="background-color: green;">Homepage</button>
+        </a>
+    </div>
+
+    <script>
+        const form = document.getElementById('feedbackForm');
+        const message = document.getElementById('message');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Show the success message
+            message.classList.add('show');
+
+            // Optionally, clear the form after submission
+            form.reset();
+        });
+    </script>
+</body>
+
+</html>

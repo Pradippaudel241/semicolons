@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Innovations in Aviation - SkyGuard</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            background-color: #0056b3;
+            color: #ffffff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .hero {
+        background-color: #000000;
+            padding: 4rem 2rem;
+            color: #000000;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+        }
+
+        .innovation-section {
+            padding: 2rem 0;
+            background-color: #ffffff;
+        }
+
+        .innovation-section h2 {
+            font-size: 2rem;
+            color: #0056b3;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .innovation-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .innovation-item {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .innovation-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .innovation-item h3 {
+            margin: 1rem 0;
+            color: #0056b3;
+        }
+
+        .innovation-item p {
+            padding: 0 1rem 1rem;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .innovation-item:hover {
+            transform: scale(1.02);
+        }
+
+        .homepage-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 2rem 0;
+            padding: 0.75rem 1.5rem;
+            background-color: #0056b3;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            text-decoration: none;
+        }
+
+        .homepage-button:hover {
+            background-color: #003d80;
+            transform: scale(1.05);
+        }
+
+        .homepage-button img {
+            width: 24px;
+            height: 24px;
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>SkyGuard Aviation Innovations</h1>
+    </header>
+
+    <section class="hero">
+        <h2>Leading the Future of Aviation Technology</h2>
+        <p>Explore the latest advancements that are shaping the skies of tomorrow.</p>
+    </section>
+
+    <div class="container">
+        <section class="innovation-section">
+            <h2>New Innovations in Aviation</h2>
+            <div class="innovation-container">
+                <div class="innovation-item">
+                    <img src="images/electric.png" alt="Innovation 1">
+                    <h3>Electric Aircraft</h3>
+                    <p>Electric aircraft are revolutionizing the aviation industry with their zero-emission technology. They promise quieter flights and reduced environmental impact.</p>
+                </div>
+             
+                <div class="innovation-item">
+                    <img src="images/supersonic.png"  alt="Innovation 3">
+                    <h3>Supersonic Jets</h3>
+                    <p>Supersonic jets are set to cut travel times drastically, bringing distant locations closer together with speeds faster than the speed of sound.</p>
+                </div>
+            </div>
+        </section>
+
+       <button click="homepage()" id="home" ><a href="index.html">Home page</a></button>
+    </div>
+</body>
+
+</html>
+<script>
+function homepage() {
+    window.location.href = 'index.html'; // Replace 'index.html' with your homepage URL
+}
+</script>
+
+</script>
